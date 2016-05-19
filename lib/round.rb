@@ -38,7 +38,7 @@ class Round
     sleep 0.5
     puts "You're playing with #{deck.count} cards."
     sleep 0.5
-    deck.cards.each do |card|
+    deck.cards.each do |card| #comment next line: eye-candy code I couldn't quite suss out
       puts "-------------------------------------------------"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
       puts "This is card number #{@current_card + 1} out of #{deck.count}."
       puts "Question: #{card.question}"
@@ -46,19 +46,22 @@ class Round
       record_guess(user_response)
       puts @guesses.last
       sleep 0.5
-    end
+    end #comment next line: eye-candy code I couldn't quite suss out
     puts "****************** Game over! ******************"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
     sleep 0.5
     @finish = "You had #{number_correct} correct guesses out of #{deck.count} for a score of #{percent_correct}%."
     puts @finish
   end
+  # second extension I couldn't get to work properly
+  # def end
+  #   fname = "results-#{Time.now.strftime('%Y-%m-%d-%l-%M-%P')}.txt"
+  #   results = File.new(fname, "w")
+  #     results.puts ("#{@guesses.map do |guess|
+  #     f.puts("#{guess}\n")
+  #     end
+  #     f.puts "#{@finish}"
+  #
 
-  def end
-    results = File.new("results-#{Time.now.strftime('%Y-%m-%d-%l-%M-%P')}.txt", "w")
-    results.puts("#{@guesses.each {|guess| puts guess}}")
-    results.puts("#{@results}")
-    results.close
-  end
 
   def percent_correct
     (@number_correct.to_f / deck.cards.length * 100).to_i
