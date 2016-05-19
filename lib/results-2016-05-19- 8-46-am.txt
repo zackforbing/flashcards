@@ -1,0 +1,9 @@
+#<Guess:0x007fb25392b2f8>
+Incorrect.
+#<Guess:0x007fb25392b0a0>
+Incorrect.
+#<Guess:0x007fb25392ada8>
+Incorrect.
+#<Guess:0x007fb25392aab0>
+Incorrect.
+You had 0 correct guesses out of 4 for a score of 0%.

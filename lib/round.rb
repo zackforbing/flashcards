@@ -1,4 +1,3 @@
-require "pry"
 class Round
   attr_reader   :deck,
                 :guesses,
@@ -49,19 +48,18 @@ class Round
     end #comment next line: eye-candy code I couldn't quite suss out
     puts "****************** Game over! ******************"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
     sleep 0.5
-    @finish = "You had #{number_correct} correct guesses out of #{deck.count} for a score of #{percent_correct}%."
-    puts @finish
+    #planned to use @finish in unimplemented extension
+    # @finish = "You had #{number_correct} correct guesses out of #{deck.count} for a score of #{percent_correct}%."
+    # puts @finish
+    puts "You had #{number_correct} correct guesses out of #{deck.count} for a score of #{percent_correct}%."
   end
-  # second extension I couldn't get to work properly
+  # second extension I couldn't get to work properly. just inputs 
   # def end
   #   fname = "results-#{Time.now.strftime('%Y-%m-%d-%l-%M-%P')}.txt"
   #   results = File.new(fname, "w")
-  #     results.puts ("#{@guesses.map do |guess|
-  #     f.puts("#{guess}\n")
-  #     end
-  #     f.puts "#{@finish}"
-  #
-
+  #   results.puts @guesses.map { |guess| "#{guess}\n" }
+  #   results.puts "#{@finish}"
+  # end
 
   def percent_correct
     (@number_correct.to_f / deck.cards.length * 100).to_i

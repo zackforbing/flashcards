@@ -13,7 +13,7 @@ while File.exist?(user_cards) == false do
     deck = Deck.new(cards)
     round = Round.new(deck)
     round.start
-    # round.end
+    round.end #- unimplemented extension
     break
   else
   puts "file does not exist. please enter a card file to use."
@@ -24,4 +24,4 @@ cards = CardGenerator.new(user_cards).cards_gen
 deck = Deck.new(cards)
 round = Round.new(deck)
 round.start
-# round.end
+round.end #- unimplemented extension

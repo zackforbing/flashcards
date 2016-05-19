@@ -4,7 +4,6 @@ class CardGenerator
 
   def initialize(filename="cards.txt")
     @filename = filename
-    # binding.pry
     @cards_gen = []
   end
 

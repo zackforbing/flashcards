@@ -1,0 +1,2 @@
+#<Enumerator:0x007fd90192a6d0>
+You had 0 correct guesses out of 4 for a score of 0%.
