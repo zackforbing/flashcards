@@ -1,25 +1,19 @@
 class Guess
   attr_reader :response,
-              :card
+              :card,
+              :feedback,
+              :correct
 
-  def initialize(response, card_object)
+  def initialize(response, card)
     @response = response
-    @card = card_object
-  end
-
-  def response
-    @response
+    @card = card
   end
 
   def correct?
-    if @card.answer == @response
-      @correct = true
-    else
-      @correct = false
-    end
+    response == card.answer
   end
   def feedback
-    if @correct
+    if correct?
       "Correct!"
     else
       "Incorrect."
