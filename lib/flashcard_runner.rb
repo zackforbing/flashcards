@@ -3,7 +3,6 @@ require_relative 'guess'
 require_relative 'deck'
 require_relative 'round'
 require_relative "card_generator"
-require "pry"
 
 puts "enter a card file to use."
 user_cards = gets.chomp
@@ -14,13 +13,15 @@ while File.exist?(user_cards) == false do
     deck = Deck.new(cards)
     round = Round.new(deck)
     round.start
+    round.end
+    break
   else
   puts "file does not exist. please enter a card file to use."
   user_cards = gets.chomp
   end
 end
 cards = CardGenerator.new(user_cards).cards_gen
-binding.pry
 deck = Deck.new(cards)
 round = Round.new(deck)
 round.start
+round.end
