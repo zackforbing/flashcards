@@ -40,13 +40,13 @@ class CardGeneratorTest < Minitest::Test
       # skip
       filename = "../lib/cards.txt"
       card_generator = CardGenerator.new(filename).cards_gen
-      assert_equal "What is 5 + 5?", card_generator[0].question
+      assert_equal "Whats the largest land animal in North America?", card_generator[0].question
     end
 
     def test_this_is_the_answer_i_expect
       # skip
       filename = "../lib/cards.txt"
       card_generator = CardGenerator.new(filename).cards_gen
-      assert_equal "10", card_generator[0].answer
+      assert_equal "bison", card_generator[0].answer
     end
   end

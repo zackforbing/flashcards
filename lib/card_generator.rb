@@ -2,7 +2,7 @@ class CardGenerator
   attr_reader :filename,
               :cards_gen
 
-  def initialize(filename)
+  def initialize(filename="cards.txt")
     @filename = filename
     # binding.pry
     @cards_gen = []

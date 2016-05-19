@@ -29,9 +29,11 @@ class Round
 
   def start
     puts "Welcome!"
+    sleep 0.5
     puts "You're playing with #{deck.count} cards."
-    puts "-------------------------------------------------"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
+    sleep 0.5
     deck.cards.each do |card|
+      puts "-------------------------------------------------"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
       puts "This is card number #{@current_card + 1} out of #{deck.count}."
       # binding.pry
       puts "Question: #{card.question}"
@@ -39,7 +41,8 @@ class Round
       record_guess(user_response)
       puts @guesses.last.feedback
     end
-    puts "****** Game over! ******"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
+    puts "****************** Game over! ******************"#.each_char {|c| putc c ; sleep 0.05; $stdout.flush }
+    sleep 0.5
     puts "You had #{number_correct} correct guesses out of #{deck.count} for a score of #{percent_correct}%."
   end
 
